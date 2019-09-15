@@ -1,6 +1,6 @@
-var listElement = document.querySelector('#app ul');
-var inputElement = document.querySelector('#app input');
-var bttnElement = document.querySelector('#app button');
+var listElement = document.querySelector('#dia ul');
+var inputElement = document.querySelector('#dia input');
+var bttnElement = document.querySelector('#dia button');
 
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 /*var todos = [
@@ -21,7 +21,8 @@ function renderTodos(){
         var pos = todos.indexOf(todo);
         linkElement.setAttribute('onclick','deleteTodo('+ pos + ')')
 ;
-        var linkText = document.createTextNode('Excluir');
+        var linkText = document.createElement('i');
+        linkElement.setAttribute('class','fas fa-check-square');
         linkElement.appendChild(linkText);
 
         todoElement.appendChild(todoText);
